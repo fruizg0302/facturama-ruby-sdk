@@ -21,6 +21,8 @@ module Facturama
                     :url => url(args),
                     :user => @connection_info.facturama_user,
                     :password => @connection_info.facturama_password ,
+                    :open_timeout => 10,
+                    :timeout => 30,
                     :headers => {:accept => :json,
                                  :content_type => :json,
                                  :user_agent => '',
@@ -41,6 +43,8 @@ module Facturama
                     :url => url(args),
                     :user => @connection_info.facturama_user,
                     :password => @connection_info.facturama_password,
+                    :open_timeout => 10,
+                    :timeout => 30,
                     :payload => json,
                     :headers => { :content_type => :json }
                 )
@@ -60,6 +64,8 @@ module Facturama
                     :url => url(args),
                     :user => @connection_info.facturama_user,
                     :password => @connection_info.facturama_password ,
+                    :open_timeout => 10,
+                    :timeout => 30,
                     :payload => json,
                     :headers => {:accept => :json,
                                  :content_type => :json}
@@ -77,6 +83,8 @@ module Facturama
                     :url => url(args),
                     :user => @connection_info.facturama_user,
                     :password => @connection_info.facturama_password ,
+                    :open_timeout => 10,
+                    :timeout => 30,
                     :headers => {:accept => :json,
                                  :content_type => :json
                     }

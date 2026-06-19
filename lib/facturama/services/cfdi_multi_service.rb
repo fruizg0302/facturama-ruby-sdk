@@ -26,17 +26,21 @@ module Facturama
             def remove(id,motive,uuidReplacement)
 
 
-                if motive.nil? && motive != ""
+                if motive.nil? || motive == ""
                     motive="02"
                 end
                 if uuidReplacement.nil? && uuidReplacement != ""
                     uuidReplacement=""
                 end
 
-                if !id.nil? && id != ""                   
-                    delete("api-lite/cfdis/" + id +"?motive=" + motive + "&uuidReplacement=" + uuidReplacement )
+                if !id.nil? && id != ""
+                    resource = "api-lite/cfdis/" + id + "?motive=" + motive
+                    if motive == "01" && !uuidReplacement.nil? && uuidReplacement != ""
+                        resource += "&uuidReplacement=" + uuidReplacement
+                    end
+                    delete(resource)
                 else
-                    raise( FacturamaException("El Id del cfdi a eliminar es obligatorio") )
+                    raise( FacturamaException.new("El Id del cfdi a eliminar es obligatorio") )
                 end
             end
 

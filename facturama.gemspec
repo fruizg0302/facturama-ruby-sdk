@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
     s.name        = "facturama"
-    s.version     = "0.0.3"
-    s.date        = "2026-06-19"
+    s.version     = "0.0.4"
+    s.date        = "2026-06-27"
     s.summary     = "Facturama API Web y API Multiemisor"
     s.description = "Funcionalidad básica de creación de Cfdis empleando las APIs Web y Multiemisor"
     s.authors     = ["Facturama"]

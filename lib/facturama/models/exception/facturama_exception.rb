@@ -2,7 +2,7 @@
 require_relative 'model_exception'
 
 
-class FacturamaException < Exception
+class FacturamaException < StandardError
 
     def initialize( exception_message, exception_details = nil  )
         super exception_message
